@@ -1,0 +1,5 @@
+{
+  "mongodb": "mongodb://localhost:27017/connected-vehicle-db",
+  "apiPort": 8080,
+  "jwtSecret": "l3eTxPC2/ThuDPlInM0+f3Rxx52IWBIUa1OgBn8y0Ai31YwkBV8F4IooU4S5ohdsrZVnPRM/vPRvG64RkW4vWA=="
+}
