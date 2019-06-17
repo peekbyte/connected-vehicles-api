@@ -10,8 +10,10 @@ app.use('/v1', routes)
 app.use(morgan('dev'))
 
 console.log('db', config.mongodb)
-console.log('apiPort', config.apiPort)
 
+
+const port = process.env.PORT || config.apiPort;
+console.log('apiPort', port)
 mongoose.connect(config.mongodb, { useNewUrlParser: true }, err => {
     if (err) {
         console.log(`[MongoDB] Failed to connect. ${err}`)
@@ -19,8 +21,8 @@ mongoose.connect(config.mongodb, { useNewUrlParser: true }, err => {
         console.log(`[MongoDB] connected: ${config.mongodb}`)
 
         // start server
-        app.listen(process.env.PORT || config.apiPort, () => {
-            console.log(`[Server] listening on port ${config.apiPort}`)
+        app.listen(port, () => {
+            console.log(`[Server] listening on port ${port}`)
         })
 
     }
