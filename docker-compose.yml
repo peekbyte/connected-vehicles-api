@@ -24,7 +24,7 @@ services:
     links:
       - mongo
     environment:
-      NODE_ENV: 'docker'     
+      NODE_ENV: docker
   mongo:
     image: "mongo"
     container_name: mongo

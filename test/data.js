@@ -6,7 +6,7 @@ const testData = [
             {
                 vehicleId: 'YS2R4X20005399401',
                 regNumber: 'ABC123',
-                connected: false
+                connected: true
             },
             {
                 vehicleId: 'VLUR4X20009093588',
@@ -16,7 +16,7 @@ const testData = [
             {
                 vehicleId: 'VLUR4X20009048066',
                 regNumber: 'GHI789',
-                connected: false
+                connected: true
             }
         ]
     },
@@ -32,7 +32,7 @@ const testData = [
             {
                 vehicleId: 'YS2R4X20005387949',
                 regNumber: 'DEF456',
-                connected: false
+                connected: true
             }
         ]
     },
@@ -43,12 +43,12 @@ const testData = [
             {
                 vehicleId: 'VLUR4X20009048066',
                 regNumber: 'PQR678',
-                connected: false
+                connected: true
             },
             {
                 vehicleId: 'YS2R4X20005387055',
                 regNumber: 'STU901',
-                connected: false
+                connected: true
             }
         ]
     }

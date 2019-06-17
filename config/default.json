@@ -1,5 +1,6 @@
 {
-  "mongodb": "mongodb://mongo:27017/connected-vehicle-db",
+  // "mongodb": "mongodb://localhost:27017/connected-vehicle-db",
+  "mongodb": "mongodb+srv://ConnectedVehicle:12345@cluster0-cnf7i.mongodb.net/test?retryWrites=true&w=majority",
   "apiPort": 8080,
   "jwtSecret": "l3eTxPC2/ThuDPlInM0+f3Rxx52IWBIUa1OgBn8y0Ai31YwkBV8F4IooU4S5ohdsrZVnPRM/vPRvG64RkW4vWA=="
 }

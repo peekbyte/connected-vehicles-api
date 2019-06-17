@@ -29,7 +29,9 @@ router.get("/", function(req, res) {
 });
 
 router.route("/customer").post(customerApi.post);
+router.route("/customers").delete(customerApi.removeAll);
 router.route("/vehicles").get(vehicleApi.search);
+router.route("/vehicle/connect").put(vehicleApi.connect);
 /* 
    route middleware to verify a token
    routes after this middleware needs to provide token
