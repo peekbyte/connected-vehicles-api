@@ -19,7 +19,7 @@ mongoose.connect(config.mongodb, { useNewUrlParser: true }, err => {
         console.log(`[MongoDB] connected: ${config.mongodb}`)
 
         // start server
-        app.listen(config.apiPort, () => {
+        app.listen(process.env.PORT || config.apiPort, () => {
             console.log(`[Server] listening on port ${config.apiPort}`)
         })
 
