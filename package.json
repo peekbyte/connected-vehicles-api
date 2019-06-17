@@ -4,8 +4,9 @@
   "description": "Connected Vehicle Api monitors connection status of all vehicles that belongs to specific customers",
   "main": "app.js",
   "scripts": {
-    "start:watch": "nodemon app.js",
-    "start": "node app.js",
+    "start:watch": "NODE_ENV=default nodemon app.js",
+    "build": "NODE_ENV=production node app.js",
+    "start": "NODE_ENV=default node app.js",
     "test": "mocha --timeout 10000 --exit",
     "test-coverage": "nyc --reporter=text  mocha --exit"
   },
@@ -20,6 +21,7 @@
     "kavenegar": "^1.1.4",
     "mongoose": "^5.5.14",
     "morgan": "^1.9.1",
+    "node-env": "^0.1.6",
     "sequelize": "^5.1.0"
   },
   "devDependencies": {
@@ -28,5 +30,8 @@
     "mocha": "^6.1.4",
     "nyc": "^14.1.1",
     "supertest": "^4.0.2"
+  },
+  "engines": {
+    "node": "10.x"
   }
 }

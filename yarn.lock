@@ -1466,6 +1466,11 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
+node-env@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/node-env/-/node-env-0.1.6.tgz#dc6570f0f912e58a9e7b72beeed2602ecfd63e21"
+  integrity sha1-3GVw8PkS5Yqee3K+7tJgLs/WPiE=
+
 node-environment-flags@1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/node-environment-flags/-/node-environment-flags-1.0.5.tgz#fa930275f5bf5dae188d6192b24b4c8bbac3d76a"
