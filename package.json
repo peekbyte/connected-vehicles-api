@@ -4,9 +4,9 @@
   "description": "Connected Vehicle Api monitors connection status of all vehicles that belongs to specific customers",
   "main": "app.js",
   "scripts": {
-    "start:watch": "NODE_ENV=default nodemon app.js",
-    "build": "NODE_ENV=production node app.js",
-    "start": "NODE_ENV=default node app.js",
+    "start:watch": "nodemon app.js",
+    "build": "node app.js",
+    "start": "node app.js",
     "test": "mocha --timeout 10000 --exit",
     "test-coverage": "nyc --reporter=text  mocha --exit"
   },
