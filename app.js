@@ -20,11 +20,13 @@ mongoose.connect(config.mongodb, { useNewUrlParser: true }, err => {
     } else {
         console.log(`[MongoDB] connected: ${config.mongodb}`)
 
-        // start server
-        app.listen(port, () => {
-            console.log(`[Server] listening on port ${port}`)
-        })
+      
 
     }
+})
+
+  // start server
+app.listen(port, () => {
+    console.log(`[Server] listening on port ${port}`)
 })
 module.exports = app
