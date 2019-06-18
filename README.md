@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/peekbyte/connected-vehicles-api.svg?branch=master)](https://travis-ci.com/peekbyte/connected-vehicles-api)
+
 # Connected-Vehicle API
 
 Connected-Vehicle is the API server. The single page web app uses this as a backend 
