@@ -26,7 +26,7 @@ mongoose.connect(config.mongodb, { useNewUrlParser: true }, err => {
 const port = process.env.PORT || 8080
 // Launch app to listen to specified port
 app.listen(port, function () {
-    console.log("Running Sukhi on port " + port)
+    console.log("Running on port " + port)
 })
 
-// module.exports = app
+module.exports = app
