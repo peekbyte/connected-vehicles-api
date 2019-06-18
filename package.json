@@ -21,7 +21,6 @@
     "kavenegar": "^1.1.4",
     "mongoose": "^5.5.14",
     "morgan": "^1.9.1",
-    "node-env": "^0.1.6",
     "sequelize": "^5.1.0"
   },
   "devDependencies": {
