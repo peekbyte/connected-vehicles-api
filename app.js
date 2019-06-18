@@ -11,9 +11,6 @@ app.use(morgan('dev'))
 
 console.log('db', config.mongodb)
 
-
-const port = process.env.PORT || config.apiPort;
-console.log('apiPort', port)
 mongoose.connect(config.mongodb, { useNewUrlParser: true }, err => {
     if (err) {
         console.log(`[MongoDB] Failed to connect. ${err}`)
@@ -25,8 +22,11 @@ mongoose.connect(config.mongodb, { useNewUrlParser: true }, err => {
     }
 })
 
-  // start server
-app.listen(port, () => {
-    console.log(`[Server] listening on port ${port}`)
+//heroku env port
+const port = process.env.PORT || 8080
+// Launch app to listen to specified port
+app.listen(port, function () {
+    console.log("Running Sukhi on port " + port)
 })
-module.exports = app
+
+// module.exports = app
