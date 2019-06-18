@@ -3,13 +3,9 @@
 # Connected-Vehicle API
 
 Connected-Vehicle is the API server. The single page web app uses this as a backend 
-API to watch the status of customers' vehicles.
+API to watch the status of customers' vehicles. Besides, all vehicles are able to send their status to this api.
 
 It's a Nodejs Expressjs application that relies on mongodb database.
-
-## Docker Dev Environment
-
-## Prerequisites
 
 ## Managing your dev environment
 
@@ -50,14 +46,16 @@ follow new entries, similar to the `tail` command. Most commonly, you'd want to 
 
     docker-compose logs -f api
     
-## Development
-run by nodemon
-npm install -g nodemon
+## Development Outside Of Docker
+Run by nodemon
+```bash
+>> npm install -g nodemon
+>> yarn start
+```
 
-## Production
+## Deply And Production
+
 export NODE_ENV=production
-
-## Deply
 
 Heroku
 
@@ -69,8 +67,6 @@ sudo snap install heroku --classic
 heroku login
 
 nginx
-
-### Requirenments
 
 
 ## Install out of docker
@@ -93,3 +89,68 @@ Connect to database
 Query
 ```bash
 > db.customers.find({}) // all customers
+```
+## API Resources
+
+Endpints:
+Development: http://localhost:8080
+Production: https://connected-vehicles.herokuapp.com
+
+### Create Customer
+Create customer and its vehicles
+
+#### Resource URL
+> POST /v1/customer
+
+#### Sample Payload
+```javascript
+{
+        name: 'Kalles Grustransporter AB',
+        address: 'Cementvägen 8, 111 11 Södertälje',
+        vehicles: [
+            {
+                vehicleId: 'YS2R4X20005399401',
+                regNumber: 'ABC123',
+                connected: true
+            },
+            {
+                vehicleId: 'VLUR4X20009093588',
+                regNumber: 'DEF456',
+                connected: false
+            },
+            {
+                vehicleId: 'VLUR4X20009048066',
+                regNumber: 'GHI789',
+                connected: true
+            }
+        ]
+    },
+```    
+
+### Remove All Customer
+Remove all customers and their vehicles (to reset the database)
+
+#### Resource URL
+> GET /v1/customers
+
+### Search Vehicles
+Get list of all (or with filter) vehicles and the status of them
+
+#### Resource URL
+> POST /v1/vehicles?q=name&status=connected
+q= name of customer
+status= connected, disconnecte, or all
+
+
+### Vehicle Connect
+Update connnection status of the vehicle
+
+#### Resource URL
+> POST /vehicle/connect
+
+#### Sample Payload
+```javascript
+{
+    vehicleId: 'VLUR4X20009048066'
+}
+```
